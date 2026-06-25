@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PM Interview Trainer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<div class="top">
+<h1>🎯 PM Interview Trainer</h1>
+<div class="stats">
+<span id="count"></span>
+<span id="favCount">⭐ 0</span>
+</div>
+</div>
+
+<input id="search" placeholder="Поиск вопроса...">
+
+<div class="card">
+<div id="question"></div>
+</div>
+
+<div class="actions">
+<button id="randomBtn">🎲 Случайный</button>
+<button id="copyBtn">📋 Скопировать</button>
+<button id="favBtn">⭐ В избранное</button>
+</div>
+
+<h3>Избранное</h3>
+<ul id="favorites"></ul>
+</div>
+
+<script src="questions.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

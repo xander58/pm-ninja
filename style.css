@@ -1,0 +1,12 @@
+
+body{font-family:Inter,Arial,sans-serif;background:#f4f6fb;margin:0}
+.wrap{max-width:900px;margin:auto;padding:32px}
+.top{display:flex;justify-content:space-between;align-items:center}
+.card{background:white;padding:40px;border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);margin:20px 0;min-height:180px}
+#question{font-size:32px;line-height:1.4;font-weight:600}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+button,input{border:none;border-radius:12px;padding:14px 18px;font-size:16px}
+button{cursor:pointer}
+input{width:100%;box-sizing:border-box;margin:10px 0}
+#favorites li{margin:8px 0}
