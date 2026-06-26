@@ -1,14 +1,213 @@
+:root {
+    --bg-color: #f4f6fb;
+    --card-bg: white;
+    --text-color: #1a2f4b;
+    --text-secondary: #666;
+    --border-color: #e1e4e8;
+    --shadow: rgba(0,0,0,.08);
+}
 
-body{font-family:Inter,Arial,sans-serif;background:#f4f6fb;margin:0}
-.wrap{max-width:900px;margin:auto;padding:32px}
-.top{display:flex;justify-content:space-between;align-items:center}
-.card{background:white;padding:40px;border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);margin:20px 0;min-height:180px}
-#question{font-size:32px;line-height:1.4;font-weight:600}
-.actions{display:flex;gap:10px;flex-wrap:wrap}
-button,input{border:none;border-radius:12px;padding:14px 18px;font-size:16px}
-button{cursor:pointer}
-input{width:100%;box-sizing:border-box;margin:10px 0}
-#favorites li{margin:8px 0}
+body.dark-mode {
+    --bg-color: #1a1f2e;
+    --card-bg: #242938;
+    --text-color: #e1e4e8;
+    --text-secondary: #8b949e;
+    --border-color: #30363d;
+    --shadow: rgba(0,0,0,.3);
+}
 
-.card{position:relative}.copy{position:absolute;right:16px;bottom:16px;padding:8px 12px;font-size:14px}.primary{background:#2563eb;color:#fff}
+body {
+    font-family: Inter, Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+.wrap {
+    max-width: 900px;
+    margin: auto;
+    padding: 32px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+}
+
+.title-section h1 {
+    margin: 0;
+    font-size: 28px;
+    color: var(--text-color);
+}
+
+.descriptor {
+    margin: 4px 0 0 0;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.theme-btn {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow);
+    margin: 20px 0;
+    min-height: 180px;
+    position: relative;
+    transition: background 0.3s;
+}
+
+#question {
+    font-size: 32px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.company {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    background: var(--bg-color);
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+button, input {
+    border: none;
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0;
+    background: var(--card-bg);
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+}
+
+.copy {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    padding: 8px 12px;
+    font-size: 14px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+}
+
+.primary {
+    background: #2563eb;
+    color: #fff;
+}
+
+#favorites {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#favorites li {
+    margin: 8px 0;
+    padding: 12px;
+    background: var(--bg-color);
+    border-radius: 8px;
+    border-left: 4px solid #2563eb;
+    color: var(--text-color);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.count {
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .wrap {
+        padding: 16px;
+    }
+    
+    #question {
+        font-size: 24px;
+    }
+    
+    .logo-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .top {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    
+    .theme-btn {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+}

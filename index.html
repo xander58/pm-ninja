@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PM Ninja</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Ninja - Вопросы для подготовки к интервью</title>
+    <link rel="icon" type="image/svg+xml" href="logo.SVG">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
-<div class="top">
-<h1> PM Ninja</h1>
-<div class="stats">
-<span id="count"></span>
-<span id="favCount">⭐ 0</span>
-</div>
-</div>
+    <div class="wrap">
+        <div class="top">
+            <div class="logo-section">
+                <img src="logo.SVG" alt="PM Ninja" class="logo">
+                <div class="title-section">
+                    <h1>🎯 PM Ninja</h1>
+                    <p class="descriptor">Вопросы для подготовке к интервью на менеджера продукта</p>
+                </div>
+            </div>
+            <button id="themeToggle" class="theme-btn" title="Переключить тему">🌙</button>
+        </div>
+        
+        <div class="stats">
+            <span id="favCount">⭐ 0</span>
+            <span id="count" class="count"></span>
+        </div>
 
-<input id="search" placeholder="Поиск вопроса...">
+        <div class="card">
+            <div id="question">Загрузка...</div>
+            <div class="company" id="company"></div>
+            <button class="copy" id="copyBtn">📋 Скопировать</button>
+        </div>
 
-<div class="card">
-<div id="question"></div><button id="copyBtn" class="copy">Скопировать</button>
-</div>
+        <div class="actions">
+            <button id="randomBtn" class="primary">Следующий вопрос</button>
+            <button id="favBtn">⭐ В избранное</button>
+        </div>
 
-<div class="actions">
-<button id="randomBtn" class="primary">Следующий вопрос</button>
-<button id="favBtn">⭐ В избранное</button>
-</div>
+        <input type="text" id="search" placeholder="🔍 Поиск вопроса...">
 
-<h3>В избранное</h3>
-<ul id="favorites"></ul>
-</div>
-
-<script src="questions.js"></script>
-<script src="app.js"></script>
+        <div class="card">
+            <h3>Избранное</h3>
+            <ul id="favorites"></ul>
+        </div>
+    </div>
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
