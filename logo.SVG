@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Top blade -->
+  <path d="M32 8 L38 28 L32 24 L26 28 Z" fill="#1a2f4b" stroke="#1a2f4b" stroke-width="2" stroke-linejoin="miter"/>
+  
+  <!-- Right blade -->
+  <path d="M56 32 L36 38 L40 32 L36 26 Z" fill="#1a2f4b" stroke="#1a2f4b" stroke-width="2" stroke-linejoin="miter"/>
+  
+  <!-- Bottom blade with orange accent -->
+  <path d="M32 56 L26 36 L32 40 L38 36 Z" fill="#1a2f4b" stroke="#1a2f4b" stroke-width="2" stroke-linejoin="miter"/>
+  <path d="M32 56 L29 46 L32 48 L35 46 Z" fill="#ff6b35" stroke="#ff6b35" stroke-width="2" stroke-linejoin="miter"/>
+  
+  <!-- Left blade -->
+  <path d="M8 32 L28 26 L24 32 L28 38 Z" fill="#1a2f4b" stroke="#1a2f4b" stroke-width="2" stroke-linejoin="miter"/>
+  
+  <!-- Center diamond -->
+  <rect x="28" y="28" width="8" height="8" fill="none" stroke="#1a2f4b" stroke-width="2"/>
+</svg>
