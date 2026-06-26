@@ -10,3 +10,5 @@ button,input{border:none;border-radius:12px;padding:14px 18px;font-size:16px}
 button{cursor:pointer}
 input{width:100%;box-sizing:border-box;margin:10px 0}
 #favorites li{margin:8px 0}
+
+.card{position:relative}.copy{position:absolute;right:16px;bottom:16px;padding:8px 12px;font-size:14px}.primary{background:#2563eb;color:#fff}
