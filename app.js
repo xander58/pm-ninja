@@ -19,18 +19,41 @@ function drawFavs() {
         favorites.slice(-10).map(f => `<li>${f}</li>`).join('');
 }
 
+// Показ toast-уведомления
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 1500);
+}
+
 document.getElementById('randomBtn').onclick = randomQ;
-document.getElementById('copyBtn').onclick = () => navigator.clipboard.writeText(questions[current].text);
+
+document.getElementById('copyBtn').onclick = () => {
+    navigator.clipboard.writeText(questions[current].text).then(() => {
+        showToast('✅ Скопировано!');
+    }).catch(() => {
+        showToast('❌ Не удалось скопировать');
+    });
+};
+
 document.getElementById('favBtn').onclick = () => {
     if (!favorites.includes(questions[current].text)) {
         favorites.push(questions[current].text);
         localStorage.setItem('favorites', JSON.stringify(favorites));
         drawFavs();
+        showToast('⭐ Добавлено в избранное');
+    } else {
+        showToast('Уже в избранном');
     }
 };
+
 document.getElementById('search').oninput = (e) => {
     const q = e.target.value.toLowerCase();
     const idx = questions.findIndex(x => x.text.toLowerCase().includes(q));
     if (idx >= 0) render(idx);
 };
+
 randomQ();
